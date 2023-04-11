@@ -33,7 +33,7 @@ function draw() {
   
   edges= createEdgeSprites();
   rabbit.collide(edges);
-
+  
    drawSprites();
    
   
@@ -94,7 +94,10 @@ function createApples() {
 apple = createSprite(random(50, 350),40, 10, 10);
 apple.addImage(appleImg);
 apple.scale=0.07;
-apple.velocityY = 3; 
+apple.velocityY = 3;
+apple.lifetime = 94;
+apple.depth = rabbit.depth
+rabbit.depth = rabbit.depth + 1
 }
 
 function createOrange() {
@@ -102,6 +105,9 @@ orangeLeaf = createSprite(random(50, 350),40, 10, 10);
 orangeLeaf.addImage(orangeImg);
 orangeLeaf.scale=0.08;
 orangeLeaf.velocityY = 3;
+orangeLeaf.lifetime = 94;
+orangeLeaf.depth = rabbit.depth
+rabbit.depth = rabbit.depth + 1
 }
 
 function createRed() {
@@ -109,4 +115,7 @@ redLeaf = createSprite(random(50, 350),40, 10, 10);
 redLeaf.addImage(redImg);
 redLeaf.scale=0.06;
   redLeaf.velocityY = 3;
+  redLeaf.lifetime = 94;
+redLeaf.depth = rabbit.depth
+rabbit.depth = rabbit.depth + 1
 }
